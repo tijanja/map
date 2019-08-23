@@ -158,6 +158,8 @@ map.addLayer({
 // .addTo(map);
 // });
 
+map.addControl(new mapboxgl.NavigationControl());
+
 map.on("click","places",function(e)
 {
     var coordinates = e.features[0].geometry.coordinates.lngLat;
