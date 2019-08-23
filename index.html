@@ -156,6 +156,13 @@ new mapboxgl.Popup()
 .setHTML(description)
 .addTo(map);
 });
+
+map.on("click","places",function(e)
+{
+    var coordinates = e.features[0].geometry.coordinates.lngLat;
+    console.log(coordinates);
+    
+})
  
 // Change the cursor to a pointer when the mouse is over the places layer.
 map.on('mouseenter', 'places', function () {
